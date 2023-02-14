@@ -41,7 +41,7 @@ sam sync --stack-name sam-app
 
 O recurso [`AWS::Serverless::Function`](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html) criará um [AWS Lambda ](https://aws.amazon.com/lambda/) função que registra [eventos](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-concepts.html#gettingstarted-concepts- evento) que recebe.
 
-Under the hood, the template is transformed into the JSON equivalent of the following CloudFormation template:
+Nos bastidores, o modelo é transformado no equivalente JSON do seguinte modelo do CloudFormation:
 
 ```yaml
 Resources:
