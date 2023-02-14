@@ -33,7 +33,7 @@ Resources:
         }
 ```
 
-And deploy it with the [SAM CLI](https://github.com/aws/aws-sam-cli):
+E implante-o com o [SAM CLI](https://github.com/aws/aws-sam-cli):
 
 ```bash
 sam sync --stack-name sam-app
