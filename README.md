@@ -84,7 +84,7 @@ Para uma introdução mais completa, consulte [este tutorial](https://docs.aws.a
 
 ### Configurando o ambiente de desenvolvimento
 
-You'll need to have Python 3.7+ installed.
+Você precisará ter o Python 3.7+ instalado.
 
 Create a [virtual environment](https://docs.python.org/3/library/venv.html):
 
