@@ -82,7 +82,7 @@ Para uma introdução mais completa, consulte [este tutorial](https://docs.aws.a
 
 ## Contribuindo
 
-### Setting up development environment
+### Configurando o ambiente de desenvolvimento
 
 You'll need to have Python 3.7+ installed.
 
