@@ -9,7 +9,7 @@ A transformação [AWS Serverless Application Model](https://aws.amazon.com/serv
 
 Para usar a transformação SAM, adicione `AWS::Serverless-2016-10-31` à [seção `Transform`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section- structure.html) do seu modelo CloudFormation.
 
-Benefits of using the SAM transform include:
+Os benefícios de usar a transformação SAM incluem:
 
 - Built-in best practices and sane defaults.
 - Local testing and debugging with the [AWS SAM CLI](https://github.com/aws/aws-sam-cli).
