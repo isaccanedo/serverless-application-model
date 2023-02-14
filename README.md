@@ -17,7 +17,7 @@ Os benefícios de usar a transformação SAM incluem:
 
 ## Começando
 
-Save the following as `template.yaml`:
+Salve o seguinte como `template.yaml`:
 
 ```yaml
 Transform: AWS::Serverless-2016-10-31
