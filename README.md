@@ -13,7 +13,7 @@ Os benefícios de usar a transformação SAM incluem:
 
 - Práticas recomendadas integradas e padrões sensatos.
 - Teste e depuração local com [AWS SAM CLI](https://github.com/aws/aws-sam-cli).
-- Extension of the CloudFormation template syntax.
+- Extensão da sintaxe do modelo CloudFormation.
 
 ## Getting started
 
