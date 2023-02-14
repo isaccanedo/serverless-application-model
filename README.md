@@ -78,7 +78,7 @@ Resources:
           Value: SAM
 ```
 
-For a more thorough introduction, see the [this tutorial](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html) in the [Developer Guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html).
+Para uma introdução mais completa, consulte [este tutorial](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html) no [ Guia do desenvolvedor](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html).
 
 ## Contributing
 
