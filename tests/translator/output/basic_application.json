@@ -1,0 +1,100 @@
+{
+  "Conditions": {
+    "TestCondition": {
+      "Fn::Equals": [
+        true,
+        false
+      ]
+    }
+  },
+  "Resources": {
+    "ApplicationWithCondition": {
+      "Condition": "TestCondition",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "serverlessrepo:applicationId",
+            "Value": "arn:aws:serverlessrepo:us-east-1:123456789012:applications/hello-world"
+          },
+          {
+            "Key": "serverlessrepo:semanticVersion",
+            "Value": "1.0.2"
+          }
+        ],
+        "TemplateURL": "https://awsserverlessrepo-changesets-xxx.s3.amazonaws.com/signed-url"
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    },
+    "ApplicationWithLocationUrl": {
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "TagName2",
+            "Value": "TagValue2"
+          }
+        ],
+        "TemplateURL": "https://s3-us-east-1.amazonaws.com/demo-bucket/template.yaml"
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    },
+    "BasicApplication": {
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "serverlessrepo:applicationId",
+            "Value": "arn:aws:serverlessrepo:us-east-1:123456789012:applications/hello-world"
+          },
+          {
+            "Key": "serverlessrepo:semanticVersion",
+            "Value": "1.0.2"
+          }
+        ],
+        "TemplateURL": "https://awsserverlessrepo-changesets-xxx.s3.amazonaws.com/signed-url"
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    },
+    "NormalApplication": {
+      "Properties": {
+        "NotificationARNs": [
+          "arn:aws:sns:us-east-1:123456789012:sns-arn"
+        ],
+        "Parameters": {
+          "IdentityNameParameter": "IdentityName"
+        },
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "serverlessrepo:applicationId",
+            "Value": "arn:aws:serverlessrepo:us-east-1:123456789012:applications/hello-world"
+          },
+          {
+            "Key": "serverlessrepo:semanticVersion",
+            "Value": "1.0.2"
+          },
+          {
+            "Key": "TagName",
+            "Value": "TagValue"
+          }
+        ],
+        "TemplateURL": "https://awsserverlessrepo-changesets-xxx.s3.amazonaws.com/signed-url",
+        "TimeoutInMinutes": 15
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    }
+  }
+}

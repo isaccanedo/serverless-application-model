@@ -1,0 +1,8 @@
+{
+  "binaryMediaCodeUri": "binary-media.zip",
+  "codeuri": "code.zip",
+  "contenturi": "layer1.zip",
+  "definitionuri": "swagger1.json",
+  "mtlsuri": "MTLSCert.pem",
+  "templateurl": "template.yaml"
+}

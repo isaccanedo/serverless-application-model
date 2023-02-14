@@ -1,0 +1,12 @@
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ${codeuri}
+      Handler: index.handler
+      Runtime: python3.8
+      AutoPublishAlias: Live
+      DeploymentPreference:
+        Type: Canary10Percent5Minutes
+Metadata:
+  SamTransformTest: true

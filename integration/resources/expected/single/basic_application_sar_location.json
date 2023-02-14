@@ -1,0 +1,6 @@
+[
+  {
+    "LogicalResourceId": "MyNestedApp",
+    "ResourceType": "AWS::CloudFormation::Stack"
+  }
+]

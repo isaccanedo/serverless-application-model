@@ -1,0 +1,40 @@
+Conditions:
+  MyCondition:
+    Fn::Equals:
+    - true
+    - false
+
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs14.x
+      CodeUri: ${codeuri}
+      MemorySize: 128
+
+      Events:
+        SNSEvent:
+          Type: SNS
+          Properties:
+            Topic:
+              Ref: MySnsTopic
+            FilterPolicy:
+              Fn::If:
+              - MyCondition
+              - price_usd:
+                - numeric:
+                  - '>='
+                  - 100
+              - price_usd:
+                - numeric:
+                  - <
+                  - 100
+            Region:
+              Ref: AWS::Region
+            SqsSubscription: true
+
+  MySnsTopic:
+    Type: AWS::SNS::Topic
+Metadata:
+  SamTransformTest: true

@@ -1,0 +1,15 @@
+Parameters:
+  SarApplicationId:
+    Type: String
+
+Resources:
+  MyNestedApp:
+    Type: AWS::Serverless::Application
+    Properties:
+      Location:
+        ApplicationId: !Ref SarApplicationId
+        SemanticVersion: 1.0.3
+      Parameters:
+        IdentityNameParameter: test
+Metadata:
+  SamTransformTest: true

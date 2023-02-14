@@ -1,0 +1,78 @@
+{
+  "Mappings": {
+    "ApplicationLocations": {
+      "ap-southeast-1": {
+        "ApplicationId": "arn:aws:serverlessrepo:ap-southeast-1:123456789012:applications/hello-world",
+        "Version": "1.0.1"
+      },
+      "cn-north-1": {
+        "ApplicationId": "arn:aws-cn:serverlessrepo:cn-north-1:123456789012:applications/hello-world",
+        "Version": "1.0.2"
+      },
+      "us-gov-west-1": {
+        "ApplicationId": "arn:aws-gov:serverlessrepo:us-gov-west-1:123456789012:applications/hello-world",
+        "Version": "1.0.3"
+      }
+    }
+  },
+  "Parameters": {
+    "ApplicationIdParam": {
+      "Default": "arn:aws:serverlessrepo:us-east-1:123456789012:applications/hello-world",
+      "Type": "String"
+    },
+    "VersionParam": {
+      "Default": "1.0.0",
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "ApplicationFindInMap": {
+      "Properties": {
+        "NotificationARNs": [
+          {
+            "Ref": "Sns"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "serverlessrepo:applicationId",
+            "Value": "arn:aws:serverlessrepo:ap-southeast-1:123456789012:applications/hello-world"
+          },
+          {
+            "Key": "serverlessrepo:semanticVersion",
+            "Value": "1.0.1"
+          }
+        ],
+        "TemplateURL": "https://awsserverlessrepo-changesets-xxx.s3.amazonaws.com/signed-url"
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    },
+    "ApplicationRefParameter": {
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "lambda:createdBy",
+            "Value": "SAM"
+          },
+          {
+            "Key": "serverlessrepo:applicationId",
+            "Value": "arn:aws:serverlessrepo:us-east-1:123456789012:applications/hello-world"
+          },
+          {
+            "Key": "serverlessrepo:semanticVersion",
+            "Value": "1.0.0"
+          }
+        ],
+        "TemplateURL": "https://awsserverlessrepo-changesets-xxx.s3.amazonaws.com/signed-url"
+      },
+      "Type": "AWS::CloudFormation::Stack"
+    },
+    "Sns": {
+      "Type": "AWS::SNS::Topic"
+    }
+  }
+}

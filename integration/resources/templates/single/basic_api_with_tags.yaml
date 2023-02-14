@@ -1,0 +1,11 @@
+Resources:
+  MyApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: my-new-stage-name
+      DefinitionUri: ${definitionuri}
+      Tags:
+        TagKey1: TagValue1
+        TagKey2: ''
+Metadata:
+  SamTransformTest: true

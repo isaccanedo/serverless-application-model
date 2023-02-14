@@ -1,0 +1,14 @@
+# https://packaging.python.org/en/latest/guides/using-manifest-in/
+# Only include files that are required in pypi source distribution.
+
+include LICENSE
+include requirements/base.txt
+include requirements/dev.txt
+recursive-include samtranslator/validator/sam_schema *.json
+include samtranslator/policy_templates_data/policy_templates.json
+include samtranslator/policy_templates_data/schema.json
+include samtranslator/model/connector_profiles/profiles.json
+include README.md
+include THIRD_PARTY_LICENSES
+
+prune tests
