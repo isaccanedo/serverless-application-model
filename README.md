@@ -11,7 +11,7 @@ Para usar a transformação SAM, adicione `AWS::Serverless-2016-10-31` à [seç�
 
 Os benefícios de usar a transformação SAM incluem:
 
-- Built-in best practices and sane defaults.
+- Práticas recomendadas integradas e padrões sensatos.
 - Local testing and debugging with the [AWS SAM CLI](https://github.com/aws/aws-sam-cli).
 - Extension of the CloudFormation template syntax.
 
