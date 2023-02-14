@@ -7,7 +7,7 @@
 
 A transformação [AWS Serverless Application Model](https://aws.amazon.com/serverless/sam/) (AWS SAM) é uma [macro do AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/ mais recente/UserGuide/template-macros.html) que transforma [modelos SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html) em [Modelos do CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html).
 
-To use the SAM transform, add `AWS::Serverless-2016-10-31` to the [`Transform` section](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html) of your CloudFormation template.
+Para usar a transformação SAM, adicione `AWS::Serverless-2016-10-31` à [seção `Transform`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section- structure.html) do seu modelo CloudFormation.
 
 Benefits of using the SAM transform include:
 
